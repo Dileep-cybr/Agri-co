@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AGRI&CO | Smart Agriculture</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f8f3;
+            color: #1f3d2b;
+        }
+
+        /* Navigation */
+        nav {
+            background: #174d2b;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #9be15d;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #9be15d;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 8%;
+            background: linear-gradient(135deg, #e7f5e1, #f8fcf5);
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 20px;
+            color: #174d2b;
+        }
+
+        .hero h1 span {
+            color: #4f9d45;
+        }
+
+        .hero p {
+            font-size: 19px;
+            line-height: 1.7;
+            color: #52665a;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #32833f;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #256b31;
+        }
+
+        .hero-icon {
+            font-size: 150px;
+        }
+
+        /* Features */
+        .features {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .features > p {
+            color: #66776b;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            color: #174d2b;
+        }
+
+        .card p {
+            color: #69786e;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            background: #174d2b;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        /* Mobile */
+        @media (max-width: 800px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero-icon {
+                font-size: 90px;
+                margin-top: 30px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            🌾 AGRI<span>&CO</span>
+        </div>
+
+        <div>
+            <a href="/">Home</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-text">
+            <h1>
+                Smart Farming.<br>
+                <span>Better Future.</span>
+            </h1>
+
+            <p>
+                AGRI&CO brings intelligent agricultural solutions
+                together in one platform. Get crop recommendations,
+                detect plant diseases, monitor weather, manage irrigation,
+                check market prices and interact with an AI assistant.
+            </p>
+
+            <a href="/dashboard" class="btn">
+                Explore AGRI&CO →
+            </a>
+        </div>
+
+        <div class="hero-icon">
+            🌱
+        </div>
+
+    </section>
+
+
+    <!-- Features -->
+    <section class="features" id="features">
+
+        <h2>Our Smart Agriculture Tools</h2>
+
+        <p>
+            Everything you need to make smarter farming decisions.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">🌱</div>
+                <h3>Crop Recommendation</h3>
+                <p>
+                    Get suitable crop recommendations based on
+                    soil and environmental conditions.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">🦠</div>
+                <h3>Disease Detection</h3>
+                <p>
+                    Upload a crop image and identify possible
+                    plant diseases using AI.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">🌦️</div>
+                <h3>Weather</h3>
+                <p>
+                    Check weather information to make better
+                    farming decisions.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">💧</div>
+                <h3>Smart Irrigation</h3>
+                <p>
+                    Get irrigation guidance based on crop,
+                    soil and weather conditions.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">📈</div>
+                <h3>Market Prices</h3>
+                <p>
+                    Monitor agricultural market prices and
+                    make informed selling decisions.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">🤖</div>
+                <h3>AI Assistant</h3>
+                <p>
+                    Ask agriculture-related questions and get
+                    intelligent assistance.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section class="features" id="about">
+
+        <h2>About AGRI&CO</h2>
+
+        <p>
+            AGRI&CO is a smart agriculture platform designed to
+            help farmers use technology and AI to make better
+            agricultural decisions.
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>🌾 AGRI&CO — Smart Agriculture for a Better Future</p>
+    </footer>
+
+</body>
+</html>

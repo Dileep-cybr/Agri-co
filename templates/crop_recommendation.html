@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crop Recommendation - AGRI&CO</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f8f3;
+        }
+
+        header {
+            background: #2e7d32;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 700px;
+            margin: 30px auto;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .description {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            background: #2e7d32;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 17px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #1b5e20;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #2e7d32;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌾 AGRI&CO</h1>
+    <p>Smart Agriculture Platform</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>🌱 Crop Recommendation</h2>
+
+        <p class="description">
+            Enter your soil and environmental conditions to get a suitable crop recommendation.
+        </p>
+
+        <form method="POST" action="/crop-recommendation">
+
+            <div class="form-group">
+                <label for="nitrogen">Nitrogen (N)</label>
+                <input type="number" id="nitrogen" name="nitrogen" placeholder="Enter nitrogen value" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phosphorus">Phosphorus (P)</label>
+                <input type="number" id="phosphorus" name="phosphorus" placeholder="Enter phosphorus value" required>
+            </div>
+
+            <div class="form-group">
+                <label for="potassium">Potassium (K)</label>
+                <input type="number" id="potassium" name="potassium" required>
+            </div>
+
+            <div class="form-group">
+                <label for="temperature">Temperature (°C)</label>
+                <input type="number" id="temperature" name="temperature" required> 
+            </div>
+
+            <div class="form-group">
+                <label for="humidity">Humidity (%)</label>
+               <input type="number" id="humidity" name="humidity" required>
+
+            <div class="form-group">
+                <label for="ph">Soil pH</label>
+       <input type="number" id="ph" name="ph" required>         
+            </div>
+
+            <div class="form-group">
+                <label for="rainfall">Rainfall (mm)</label>
+                <input type="number" id="rainfall" name="rainfall" required>
+            </div>
+
+            <button type="submit">
+                🌱 Get Crop Recommendation
+            </button>
+
+        </form>
+{% if recommendation %}
+<div style="margin-top: 25px; padding: 20px; background: #e8f5e9; border-radius: 10px; text-align: center;">
+    <h3>🌱 Recommended Crop</h3>
+    <p style="font-size: 22px; color: #2e7d32;">
+        {{ recommendation }}
+    </p>
+</div>
+{% endif %}
+        <a href="/dashboard" class="back">
+            ← Back to Dashboard
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
