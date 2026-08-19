@@ -30,6 +30,7 @@ def home():
 @app.route("/dashboard")
 def dashboard():
     return render_template("dashboard.html")
+@app.route("/crop_recommendation", methods=["GET", "POST"])
 @app.route("/crop-recommendation", methods=["GET", "POST"])
 def crop_recommendation():
 
